@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #7ebdc2;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  font-size: 2rem;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: white;
+}
+
+form button {
+  color: #f3dfa2;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background: #617073;
+  color: white;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 40%;
+  list-style-type: none;
+}
+
+.todo-div {
+  margin: 0.5rem;
+  background-color: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.todo-div li {
+  flex: 1;
+}
+
+.trash-btn,
+.complete-btn {
+  background-color: #ff6f47;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 5px;
+}
+
+.complete-btn {
+  background-color: rgb(73, 204, 73);
+}
+
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+
+.fa-check,
+.fa-trash {
+  pointer-events: none; /*you cannot click on those elements anymore*/
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  transform: translateY(9rem) rotateZ(25deg);
+  opacity: 0;
+}
+
+select {
+  appearance: none;
+  outline: none;
+  border: none;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1.1rem;
+}
+
+.select {
+  margin: 0 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background-color: #f3dfa2;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.select:hover::after {
+  background-color: #617073;
+}
+
+.clear-all {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.clear-btn {
+  color: white;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  background-color: #617073;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.clear-btn:hover {
+  background-color: #171a21;
+}
